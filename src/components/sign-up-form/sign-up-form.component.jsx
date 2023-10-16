@@ -5,7 +5,7 @@ import {
 } from "../../utils/firebase/firebase.utils";
 
 import FormInput from "../form-input/form-input.comonent";
-import "./sign-up.styles.scss";
+import { SignUpContainer } from "./sign-up.styles";
 import Button from "../button/button.component";
 import { UserContext } from "../../contexts/user.context";
 
@@ -53,12 +53,12 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <SignUpContainer>
       <h2>Don't have an account?</h2>
       <span>Sign up with your Email and password</span>
       <form onSubmit={handelSubmit}>
         <FormInput
-          lable="Display name"
+          label="Display name"
           type="text"
           required
           onChange={handelChange}
@@ -67,7 +67,7 @@ const SignUpForm = () => {
         />
 
         <FormInput
-          lable="Email"
+          label="Email"
           type="email"
           required
           onChange={handelChange}
@@ -76,7 +76,7 @@ const SignUpForm = () => {
         />
 
         <FormInput
-          lable="Password"
+          label="Password"
           type="password"
           required
           onChange={handelChange}
@@ -85,7 +85,7 @@ const SignUpForm = () => {
         />
 
         <FormInput
-          lable="Confirm Password"
+          label="Confirm Password"
           type="password"
           required
           onChange={handelChange}
@@ -94,7 +94,7 @@ const SignUpForm = () => {
         />
         <Button type="submit">Sign Up</Button>
       </form>
-    </div>
+    </SignUpContainer>
   );
 };
 

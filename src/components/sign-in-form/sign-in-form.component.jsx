@@ -1,6 +1,6 @@
-import "./sign-in-form.styles.scss";
+import { ButtonsContainer, SignInContainer } from "./sign-in-form.styles.jsx";
 import { useState } from "react";
-import Button from "../button/button.component";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 import FormInput from "../form-input/form-input.comonent";
 import {
   signInAuthUserWithEmailAndPassword,
@@ -56,36 +56,36 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="sign-in-container">
+    <SignInContainer>
       <h2>I already have an account</h2>
       <span>sign in with your email and password</span>
       <form onSubmit={handelSubmit}>
         <FormInput
-          lable={"email"}
+          label={"email"}
           name="email"
           value={email}
           onChange={handelChange}
           required
         />
         <FormInput
-          lable={"password"}
+          label={"password"}
           name="password"
           value={password}
           onChange={handelChange}
           required
         />
-        <div className="buttons-container">
+        <ButtonsContainer>
           <Button type="submit">Sign in</Button>
           <Button
             type="button"
             onClick={signInWithGoogle}
-            buttonType={"google"}
+            buttonType={BUTTON_TYPE_CLASSES.google}
           >
             Google sign in
           </Button>
-        </div>
+        </ButtonsContainer>
       </form>
-    </div>
+    </SignInContainer>
   );
 };
 
