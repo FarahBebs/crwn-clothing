@@ -16,9 +16,9 @@ const categories = [
   },
   {
     id: 3,
-    title: "jackets",
+    title: "sneakers",
     imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    route: "shop/jackets",
+    route: "shop/sneakers",
   },
   {
     id: 4,
