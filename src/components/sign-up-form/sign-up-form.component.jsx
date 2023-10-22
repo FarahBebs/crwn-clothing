@@ -7,8 +7,6 @@ import {
 import FormInput from "../form-input/form-input.comonent";
 import { SignUpContainer } from "./sign-up.styles";
 import Button from "../button/button.component";
-import { UserContext } from "../../contexts/user.context";
-
 const defaultFormFields = {
   displayName: "",
   email: "",
