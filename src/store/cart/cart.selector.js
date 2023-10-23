@@ -1,5 +1,4 @@
 import { createSelector } from "reselect";
-import CART_ACTION_TYPES from "./cart.types";
 
 const selectCartReducer = (state) => state.cart;
 
